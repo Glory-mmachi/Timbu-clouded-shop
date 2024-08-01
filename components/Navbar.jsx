@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import SideNav from "@/components/SideNav";
 
 export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   return (
     <section className="bg-[#160632] px-[20px] md:px-[120px] py-[16px]">
       <div className="flex justify-between items-center pb-[32px]">
@@ -13,6 +21,7 @@ export default function Navbar() {
           height={41}
         />
         <Image
+          onClick={toggleNav}
           className="md:hidden"
           src="/MenuVector.svg"
           width={30}
@@ -35,6 +44,7 @@ export default function Navbar() {
         <li>Style</li>
         <li>About</li>
       </ul>
+      <SideNav isOpen={isNavOpen} toggleNav={toggleNav} />
     </section>
   );
 }

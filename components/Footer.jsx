@@ -11,7 +11,7 @@ export default function Footer() {
 
       <section className="flex flex-col md:flex-wrap gap-[20px] w-full md:flex-row pt-[43px]">
         {/* left */}
-        <div className="pt-[80px] md:order-none order-2 justify-between flex flex-row md:flex-nowrap flex-wrap gap-[30px] md:gap-4 ">
+        <div className="pt-[80px] md:order-none order-2 justify-start text-start flex flex-row md:flex-nowrap flex-wrap gap-[30px] md:gap-4 ">
           {FOOTER_LINKS.map((column) => (
             <FooterColumn title={column.title}>
               <ul className=" flex flex-col gap-[10px] text-gray-30">
@@ -63,7 +63,7 @@ export default function Footer() {
       </section>
 
       {/* down */}
-      <section className="flex items-center w-full gap-[70px] mt-[46px]">
+      <section className="flex items-center justify-start text-start w-full gap-[70px] mt-[46px]">
         {/* left */}
         <div>
           <FooterColumn padding={"7678900px"} title={PAYMENT.title}>
