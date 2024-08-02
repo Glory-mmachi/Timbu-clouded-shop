@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 function SideNav({ isOpen, toggleNav }) {
   return (
@@ -8,21 +8,25 @@ function SideNav({ isOpen, toggleNav }) {
       } transition-transform duration-300 ease-in-out`}
     >
       <div className="flex justify-end">
-        <button className="p-2 text-[70px]" onClick={toggleNav}>
+        <button className="p-2 text-[55px]" onClick={toggleNav}>
           &times;
         </button>
       </div>
-      <nav className="p-4">
+      <nav className="py-10">
         <ul className="text-[28px] text-center">
-          <li className="p-2 ">
-            <a href="/">Home</a>
-          </li>
-          <li className="p-2">
-            <a href="/about">About</a>
-          </li>
-          <li className="p-2">
-            <a href="/contact">Contact</a>
-          </li>
+          <Link href="/">
+            <li className="p-4">Home</li>
+          </Link>
+          <Link href="/products">
+            <li className="p-4">Store</li>
+          </Link>
+          <Link href="/">
+            <li className="p-4">Style</li>
+          </Link>
+
+          <Link href="/">
+            <li className="p-4">About</li>
+          </Link>
         </ul>
       </nav>
     </div>
