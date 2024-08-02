@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SideNav from "@/components/SideNav";
 
 export default function Navbar() {
@@ -11,6 +11,18 @@ export default function Navbar() {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isNavOpen]);
   return (
     <section className="bg-[#160632] px-[20px] md:px-[120px] py-[16px]">
       <div className="flex justify-between items-center pb-[32px]">

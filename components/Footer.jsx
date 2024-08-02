@@ -43,53 +43,55 @@ export default function Footer() {
               <p className="text-gray-600 mb-6">
                 Subscribe to our newsletter to get latest updates on our offers.
               </p>
-              <form className="flex flex-row justify-between items-center gap-[20px]">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  required
-                  className="w-[374px] p-3 border text-[#898384] border-gray-300 rounded-md bg-[#E3E3E3] focus:outline-none focus:border-purple-500"
-                />
-                <button
-                  type="submit"
-                  className="p-[10px]  bg-[#5E2764] text-white rounded-md w-[155px] h-[50px]"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <form className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-[20px]">
+  <input
+    type="email"
+    placeholder="Enter your email"
+    required
+    className="w-full md:w-[374px] p-3 border text-[#898384] border-gray-300 rounded-md bg-[#E3E3E3] focus:outline-none focus:border-purple-500"
+  />
+  <button
+    type="submit"
+    className="p-[10px] bg-[#5E2764] text-white rounded-md w-full md:w-[155px] h-[50px]"
+  >
+    Subscribe
+  </button>
+</form>
+
             </div>
           </div>
         </div>
       </section>
 
       {/* down */}
-      <section className="flex items-center justify-start text-start w-full gap-[70px] mt-[46px]">
-        {/* left */}
-        <div>
-          <FooterColumn padding={"7678900px"} title={PAYMENT.title}>
-            <ul className=" flex flex-row gap-[40px] py-[10px] text-gray-30">
-              {PAYMENT.links.map((link) => (
-                <Link href="/" key={link}>
-                  <Image src={link} alt="logo" width={50} height={50} />
-                </Link>
-              ))}
-            </ul>
-          </FooterColumn>
-        </div>
+      <section className="flex flex-col md:flex-row items-start md:items-center justify-start text-start w-full gap-[30px] md:gap-[70px] mt-[46px]">
+  {/* left */}
+  <div className="w-full md:w-auto">
+    <FooterColumn padding={"70px"} title={PAYMENT.title}>
+      <ul className="flex flex-row flex-wrap gap-[20px] md:gap-[40px] text-[16px] py-[10px] text-gray-30">
+        {PAYMENT.links.map((link) => (
+          <Link href="/" key={link}>
+            <Image src={link} alt="logo" width={50} height={50} />
+          </Link>
+        ))}
+      </ul>
+    </FooterColumn>
+  </div>
 
-        {/* right */}
-        <div className="pl-[28px]">
-          <FooterColumn title={SOCIALS.title}>
-            <ul className=" flex flex-row gap-[40px] text-gray-30">
-              {SOCIALS.links.map((link) => (
-                <Link href="/" key={link}>
-                  <Image src={link} alt="logo" width={40} height={40} />
-                </Link>
-              ))}
-            </ul>
-          </FooterColumn>
-        </div>
-      </section>
+  {/* right */}
+  <div className="w-full md:w-auto pl-0 md:pl-[28px]">
+    <FooterColumn title={SOCIALS.title}>
+      <ul className="flex flex-wrap gap-[20px] md:gap-[40px] text-gray-30">
+        {SOCIALS.links.map((link) => (
+          <Link href="/" key={link}>
+            <Image src={link} alt="logo" width={40} height={40} />
+          </Link>
+        ))}
+      </ul>
+    </FooterColumn>
+  </div>
+</section>
+
     </footer>
   );
 }

@@ -5,7 +5,7 @@ function SideNav({ isOpen, toggleNav }) {
     <div
       className={`fixed top-0 right-0 h-full w-64 bg-[#160632] z-10 text-white transform ${
         isOpen ? "translate-x-0" : "-translate-y-full"
-      } transition-transform duration-500 ease-in-out`}
+      } transition-transform duration-300 ease-in-out`}
     >
       <div className="flex justify-end">
         <button className="p-2 text-[70px]" onClick={toggleNav}>
