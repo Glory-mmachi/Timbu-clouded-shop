@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 import { Poppins, Lora } from "next/font/google";
 import Link from "next/link";
 
@@ -45,6 +46,7 @@ export default function Home() {
         </div>
       </section>
       <Footer />
+     
     </div>
   );
 }

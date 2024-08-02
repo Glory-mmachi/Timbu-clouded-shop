@@ -1,8 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 import ProductsList from "@/components/PoductsList";
-import Link from "next/link";
 import { TopSeller, VintageShirts, PantCollections } from "@/constants";
 
 export default function page() {
@@ -39,7 +39,7 @@ export default function page() {
       </div>
 
       {/* Top selling items */}
-      <div className="flex justify-between items-center mt-[76px] px-[20px] md:px-[60px]">
+      <div className="flex justify-between items-center -mt-[76px] md:mt-[56px] px-[20px] md:px-[60px]">
         <h1 className="md:text-[32px] text-[20px] font-[700] text-[#183864]">
           Top selling items
         </h1>
@@ -64,7 +64,7 @@ export default function page() {
           View All
         </Link>
       </div>
-      <ProductsList products={VintageShirts} number={5} />
+      <ProductsList products={VintageShirts}/>
 
       {/* Pant collections */}
       <div className="flex justify-between items-center mt-[76px] px-[20px] md:px-[60px]">

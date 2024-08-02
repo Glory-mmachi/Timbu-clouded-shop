@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import SideNav from "@/components/SideNav";
+import BackToTopButton from '../components/BackToTopButton'
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -96,6 +97,7 @@ export default function Navbar() {
         </Link>
       </ul>
       <SideNav isOpen={isNavOpen} toggleNav={toggleNav} />
+      <BackToTopButton/>
     </section>
   );
 }
