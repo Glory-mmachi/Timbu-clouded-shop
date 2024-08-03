@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
-  console.log(SOCIALS);
   return (
     <footer className="md:px-[120px] px-[18px]">
       {/* top */}
